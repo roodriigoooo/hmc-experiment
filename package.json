@@ -1,0 +1,18 @@
+{
+  "name": "hmc-order-study",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc && node scripts/build.mjs",
+    "dev": "npm run build && python3 -m server.app",
+    "test": "python3 -m unittest discover -s tests -v",
+    "start": "python3 -m server.app",
+    "test:frontend": "node --test tests/frontend.mjs",
+    "verify": "npm run build && npm test && npm run test:frontend",
+    "demo": "npm run build && python3 scripts/local-demo.py"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3"
+  },
+  "type": "module"
+}

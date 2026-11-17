@@ -1,0 +1,17 @@
+# Analysis and pilot note
+
+This is one within-participant three-condition study. Each participant completes A, B, C exactly once with different matched task sets. The primary intervention contrast is C versus B recovery latency. Planned interruption-cost contrasts are B versus A active task time and completed-order accuracy. Elapsed time and custom workload are complementary. C versus A is descriptive: failure to detect a difference does not demonstrate equivalence or full restoration. The study does not identify the cue's benefit without interruption, a psychological mechanism, or workplace productivity in general.
+
+Participants are the independent sampling units. Trials within participants are repeated measures; do not use them as independent recruits. The planned contrasts are paired. Finalize the analysis, treatment of skew/censoring, missingness, exclusions, and multiple-testing policy before examining main outcomes. The implementation has no timeout success imputation, winner dashboard, significance stopping, adaptive difficulty, or performance-based recruitment replacement.
+
+Counterbalance condition order and task-set order independently using complete 36-slot cycles. Each batch of six includes every condition order once. Each condition order uses every task permutation once across six batches. All cycle assignments remain in the audit, including abandonments. If recruitment extends beyond a cycle, issue the next complete seeded cycle (`seed:cycle-index`) in order; never reclaim or selectively fill slots. Track assigned, started, completed, withdrawn and aborted separately; complete-case balance is not guaranteed.
+
+Condition order, block position, task set, main prior cue exposure, universal practice cue exposure, protocol version, and deviations support sensitivity analysis. Counterbalancing distributes order effects; it cannot erase strategy learning. Report substantial carryover during the pilot, including order-dependent differences and participant descriptions, without claiming that a small pilot precisely estimates it.
+
+## Required pilot release review
+
+The application has not been behaviorally validated. Recruit 4–6 separate pilot participants before main collection. Record actual visit duration (target estimate 25–30 minutes, without artificial slowing), instruction comprehension, viewport fit at 1280×720, secondary-task engagement, omissions, device/focus flags, and the proportion of unobserved recovery episodes. Observe whether four checks actually create measurable recovery demands and whether the minimal selector is confusing. Document substantial carryover and whether returning volunteers recognize materials. Recognition is an experimenter procedure, not perfect duplicate-person detection.
+
+If recovery demands are negligible or instructions confusing, document the result and propose a controlled protocol revision before main collection. Do not manufacture an effect, add distractions, or silently change difficulty. The absence of richer checklist support intentionally limits generalization. No pilot or test data belong in the main cohort.
+
+A researcher must populate contact and study information in a new protocol version before creating live sessions. Obtain applicable institutional review outside this software; no approval is implied. Keep main scientific versions immutable and report versions separately. The planning target is 36 completed main participants, not a universal power guarantee. Collect all three conditions irrespective of early findings.

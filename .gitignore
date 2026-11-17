@@ -1,0 +1,13 @@
+node_modules/
+dist/
+__pycache__/
+data/*
+!data/.gitkeep
+.env
+*.sqlite*
+
+.env.*
+.DS_Store
+artifacts/
+*.zip
+*.log

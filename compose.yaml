@@ -1,0 +1,13 @@
+services:
+  study:
+    build: .
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set a private password of at least 16 characters}
+      BUILD_ID: ${BUILD_ID:?Set an immutable build identifier}
+      COOKIE_SECURE: ${COOKIE_SECURE:-0}
+    volumes: ["research-data:/data"]
+    restart: unless-stopped
+    security_opt: ["no-new-privileges:true"]
+volumes:
+  research-data:

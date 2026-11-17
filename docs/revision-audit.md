@@ -1,0 +1,56 @@
+# Revision audit — pilot-4 (2026-11-17)
+
+Reviewed existing flow, reducers, fixtures, timing, allocation, exports, questionnaires and tests before edits. Existing baseline: 29 Python and 5 JavaScript checks; pilot-3 has historical rendered evidence below. This turn's pre-edit server launch on a temporary database failed at loopback bind (`PermissionError: Operation not permitted`); browser runtime discovery returned `[]`. No fresh screen inspection is claimed. Changes proceed independently of this environmental blocker.
+
+| Concern | Current behavior (pilot-3) | Required change | Verification |
+|---|---|---|---|
+| Finding/understanding controls | Explicit row controls, separate judgment/submit/finish, fixed sequence | Preserve; extend to eight numbered controls and worked example | Full Python/TS visit parity; visual/human review pending |
+| Readability / comparison | Four aligned rows, persistent rules | Eight rows; remove duplicate field labels, preserve 18px controls/22px values, move reserved card to response column | Build/source inspection; 1280×720 and zoom must be inspected locally |
+| Extra clues / shortcut learning | No main progress checklist, but answer patterns repeat and secondary sides alternate | Preserve absence of progress hints; version balanced seeded nonperiodic fixtures and forms | Matching/difference/distribution tests |
+| B/C differences | Same rendering and return policy, C-only card | Preserve shared markup/state/focus/input path; same reserved slot regardless of card | B/C reducer identity and actual-history tests; geometry pending |
+| Timing / missing outcomes | Separate latencies and explicit nulls, per-document clocks | Retain as secondary; add committed-action point and explicit missing procedure outcome | Edge episodes, reload and partial-visit tests |
+| Sequence vs judgment | Selection error + judgment correctness | Primary executed continuation error; corrected selections and factual errors separate | Wrong selection then correction; wrong-category submit; delayed wrong judgment; early Finish |
+| Training / assistance | All configurations taught, criterion practice, recorded pauses | Eight-check examples/feedback; same criterion and allocation timing | Success/failure and immutable assignment tests |
+| Workload wording/scoring | Verified six-item Raw TLX, separate exploratory item | No change; subordinate to procedural endpoint | Existing orientation/completeness regression |
+| Existing data / versions | Immutable manifests, old UI/metrics available | Add pilot-4 only; archive v3 UI and v2/3 metric derivation | Historical full visits and separated export/version tests |
+| Duration / sampling | 12×4 checks/block, six interruptions, 36 completer plan | 6×8 checks; new checkpoint positions, same judgments/exposures; document 20–25 minute assumption and sparse-error limits | Counts tested; human timing and inferential justification outstanding |
+| Teammate access | Manual password/environment setup; busy port failure | Synthetic-only local launcher, free-port fallback, clone/run guide, private source sharing | Launcher unit checks/CLI help; actual socket bind blocked here |
+
+No production migration, real-data deletion, existing allocation regeneration or collection deployment. Latest user decisions explicitly authorize longer sequences and procedural-primary analysis; these override the earlier latency-primary design for new sessions. All historical audit entries below remain historical evidence, not verification of pilot-4.
+
+# Revision audit — protocol pilot-3 (2026-10-30)
+
+Audited the participant flow, instruction content, reducers, render/timing path, allocation persistence, questionnaire and exports, then inspected the actual pilot-2 rendering in Chromium at 1280×720 (this environment could bind a local server and run a cached Playwright Chromium, which the pilot-2 revision could not). Changes are recorded in [protocol-v3.md](protocol-v3.md).
+
+| Concern | Current behavior (pilot-2) | Required change | Verification |
+|---|---|---|---|
+| Finding and understanding controls | Records are vertical lists, but category buttons are a horizontal strip below them, so there is no spatial mapping. Submit sits mid-row between judgments and Finish. No indication of which step comes next. Withdrawal is one click. Consent silently does nothing when unticked. The header brand link leaves the page mid-task | Category button as each row's header. Right-hand panel with step 2, step 3 and a separated Finish that states its consequence. Current step highlighted. Inline withdrawal confirmation. Disabled buttons until requirements are met. Participant brand is not a link | Rendered walkthrough of every screen; human walkthrough pending |
+| Readability and source comparison | 17 px values split across two cards plus a rules card; lowercase data against capitalized rules | Single comparison table with requested and packed values adjacent per row; 24 px monospaced, slashed zero; capitalized words; rule table directly beneath | Rendered at 1280×720: every task screen fits with no vertical or horizontal scroll |
+| Extra progress clues | None; selections cleared | Kept: no checklist, completion marks or disabled categories. Step highlight covers only the current check. Order pips are identical across conditions. Guide appears in demonstrations only | Source review; B/C button class and state lists identical |
+| B/C differences beyond the card | Card is a small text line using short names (“Delivery”) that differ from the button labels (“Delivery code”), with a stray space before the period | Fixed 64 px slot above the check list. C shows a static high-contrast card with the exact button label. A and B leave the slot empty | Full rendered session: 16 element rectangles, all main-area button classes and disabled states, and focus identical in B and C. Card survives pointer motion and background clicks, and clears on selection |
+| Timing boundaries and unobserved recoveries | Frame-aware readiness events | Unchanged path. No task-screen animation. Disabled dimming softened during the 300 ms acknowledgement to avoid flicker | Server accepted every event of a full rendered session; existing timing tests pass |
+| Sequence versus judgment errors | Separate fields | Metrics unchanged. Dedicated row buttons rather than clickable rows, so reading clicks do not become recorded selections | Unchanged metric tests |
+| Training and researcher assistance | One dense instruction page; one-line demonstration hint; text feedback table with Continue below the fold at 720 px | Five-page onboarding built from the real components; live setup checklist; demonstration guide with highlighted next control; scorecard feedback with streak/attempt indicators; Continue always visible. Pause/report unchanged | Rendered; comprehension needs the Stage 1 pilot |
+| Workload wording and scoring | Typed numeric fields (0–100, step 5). The exploratory item shows a researcher-facing title | `raw-tlx-2`: same wording, anchors, keys and scoring, with one 21-mark scale per item (no numerals, no default), an answered counter and a sticky Save. Exploratory item titled “Keeping track” | Unit test asserts item identity apart from that title; rendered |
+| Existing data and protocol versions | Only synthetic demo sessions exist locally (`data/study.sqlite`: one pilot-1 demo; `data/local-test.sqlite`: one pilot-2 demo) | New immutable `pilot-3`; pilot-2 interface bundled and routed; live sessions require the current interface; `interface_version` in event context, export rows and bundle | New tests; export inspected |
+| Save status | “Saving locally · queued…” stays visible after acknowledgement until the next render | Indicator updates when acknowledgement arrives | Rendered: “All responses saved” |
+
+Planning parameters match the documented settings; none were changed. Not done here: human usability and silent pilots, 200% zoom/reflow review, physical display variation, and offline/reconnect in a real network outage.
+
+# Revision audit — protocol pilot-2 (2026-10-30)
+
+Repository has no AGENTS.md or Git metadata. Existing stack: TypeScript, Python stdlib HTTP, SQLite. Audited the reducers, rendering/timers, manifests, allocation transactions, ingestion, metrics, exports and tests before edits. Original server launch against an isolated `/private/tmp` demo database failed with `PermissionError: Operation not permitted` at socket bind. Browser skill initialization succeeded but discovery returned no browsers. Consequently **actual pre-edit participant inspection is blocked**, not claimed complete; the same constraint applies to rendered acceptance until a browser-enabled workstation is available.
+
+| Concern | Current behavior | Required change | Verification |
+|---|---|---|---|
+| Finding/understanding controls | Category dropdown; judgment buttons submit immediately | Four fixed category buttons; separate judgment and Submit; separate Finish | Reducer tests; rendered controls and human walkthrough pending |
+| Readability/source comparison | Parallel records and persistent rules; 14 px labels and generous vertical margins | Aligned rows, 16 px labels, compact spacing without text shrinking, code font | Layout acceptance at 1280×720 and zoom pending |
+| Unintended progress clues | No checklist; selections clear on submit; static sequence | Preserve; clear judgment too; no disabled completed categories | History and selection tests |
+| B/C differences | Reserved cue area; same records and secondary positions | Preserve geometry; exact actual-last wording; same fresh-input/focus policy | Transition tests; rendered comparison pending |
+| Timing/unobserved recoveries | Monotonic segments; return event precedes DOM replacement; null recovery retained | Frame-aware availability events; expected submission latency; explicit applicability and end reasons | Metric edge cases and clock tests |
+| Sequence versus judgment | Final omissions incorrect on completed orders; combined sequence count | Separate selection/submission errors, first/final judgments, all required-category denominators | Recomputed synthetic sessions |
+| Training/assistance | One C practice order, two comprehension items, one repeat; no correctness criterion | Fixed A/B/C demonstration then configurable two consecutive correct orders in ≤6 attempts; assistance/disruption logging | Training success/failure tests |
+| Workload | Three integer custom ratings | Six verified Raw TLX items plus separate exploratory tracking item; preserve v1 | Orientation/completeness/export tests |
+| Existing data/version handling | Immutable manifests and append-only events; derived cache uses global metric ID | Dispatch legacy/revised reducers and metrics; retain legacy UI; version every export row | Legacy regression and mixed-version tests |
+
+Planning parameters match the prompt: 36 main completers, 4–6 separate pilots, 12 orders/block, six 10-second interruptions, 300 ms acknowledgements, 60-second breaks, 1280×720 minimum, mouse/trackpad study method. Preserve seed, schedule, allocation timing (after training), and assigned slots. Only the inadequate training criterion changes. No production data migration, allocation regeneration, or deployment is authorized or performed.
