@@ -111,7 +111,7 @@ class ProcedureTests(unittest.TestCase):
         self.assertEqual(s['accuracy_denominator'],0);self.assertEqual(s['planned_accuracy_denominator'],48);self.assertEqual(s['unfinished_exposed_checks'],8)
         changed=copy.deepcopy(events);next(e for e in changed if e['seq']==ret['seq'])['context']['expected']=None
         e=next(e for e in derive(changed,manifest(DEFAULT,'test'),d.snap['assignment'])['interruptions'] if e['return_ready']['seq']==ret['seq'])
-        self.assertIsNone(e['procedure_error']);self.assertEqual(e['procedure_unobserved_reason'],'not_applicable_no_remaining_check')
+        self.assertIsNone(e['procedure_error']);self.assertIsNone(e['first_action_sequence_error']);self.assertEqual(e['procedure_unobserved_reason'],'not_applicable_no_remaining_check')
     def test_actual_history_card_and_fixed_return_policy(self):
         outcomes=[]
         for cond in 'BC':

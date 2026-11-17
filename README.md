@@ -105,7 +105,7 @@ The browser uses monotonic timestamps per document. Revised task availability is
 
 Historical evidence only: the pilot-3 revision was checked in headless Chromium at 1280×720: a complete visit, no-scroll fit of every task screen, and identical B/C return geometry, focus and control state (see the verification record). Zoom/reflow, other browsers and displays, and browser offline/reconnect behavior remain unverified. Pilot-4 has not yet had a rendered walkthrough in this environment (socket permission denied; no browser connection). Do not transfer pilot-3 visual results to the new eight-row interface. The app has not been behaviorally validated. Complete the technical checklist and both human pilot stages before live collection. Do not equate passing software tests with usability, instrument validation or a psychological effect.
 
-The existing local database contains one synthetic demo session and no pilot/main records. An early legacy test import initialized the new immutable default protocol alongside it; raw demo observations and assignments were not changed. Server imports are now side-effect-free so future test/export imports cannot open a collection database. No production migration or deployment was performed.
+During the earlier pilot-2 revision, inspection found one synthetic demo session and no pilot/main records in the then-current local database. An early legacy test import initialized the new immutable default protocol alongside it; raw demo observations and assignments were not changed. Server imports are now side-effect-free so future test/export imports cannot open a collection database. No production migration or deployment was performed.
 
 ## Private repository sharing
 

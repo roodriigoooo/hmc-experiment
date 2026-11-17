@@ -1,6 +1,6 @@
 # Verification record — pilot-4
 
-Date: 2026-11-17. Final `npm run verify` passed: TypeScript build, **38 Python tests and 6 JavaScript tests**. Python tests completed in 76.1 seconds. Application fingerprint: `hmc-9db0289c3d7da7a5`. All synthetic visits use temporary SQLite stores, not existing collection/demo databases.
+Date: 2026-11-17. Final `npm run verify` passed: TypeScript build, **38 Python tests and 6 JavaScript tests**. Python tests completed in 76.1 seconds. Final application fingerprint: `hmc-ea81bead0a098d9b`. After the full suite, the undefined-expected-check edge case was tightened so first-action sequence error is also null; its focused full-visit regression passed (6.7 seconds). All synthetic visits use temporary SQLite stores, not existing collection/demo databases.
 
 | Executed check | Evidence |
 |---|---|
@@ -18,7 +18,7 @@ Date: 2026-11-17. Final `npm run verify` passed: TypeScript build, **38 Python t
 
 Target remains desktop Chromium, mouse/trackpad, at least 1280×720 CSS pixels. Record the actual browser/OS/display/scaling/zoom/input setup; test all instruction/training/task/return/rating/completion screens, whole-workspace fit, 200% zoom and narrow reflow, B/C geometry/focus, held/double input and actual offline/reconnect. Human Stage 1 walkthroughs and Stage 2 silent rehearsals are still needed for understanding, comfort, training sufficiency, matched difficulty, error floors, 20–25 minute feasibility and construct validity. Passing software tests cannot supply these findings.
 
-No active environment was deployed or production data migrated. Startup migration is additive only (new immutable pilot-4 manifest). Existing sessions and assignments remain under their original versions/build requirements. The source workspace forbids `.git` writes, so private-repository publication uses an isolated, source-only checkout; clone that repository for normal Git collaboration.
+Private source repository: https://github.com/roodriigoooo/hmc-experiment (visibility verified PRIVATE). GitHub Actions is configured; its remote result could not be retrieved here (CLI API connection unavailable; connector access to the new private repository returned 404). The passing results above are local checks. No active collection environment was deployed or production data migrated. Startup migration is additive only (new immutable pilot-4 manifest). Existing sessions and assignments remain under their original versions/build requirements. The source workspace forbids `.git` writes, so private-repository publication uses an isolated, source-only checkout; clone that repository for normal Git collaboration.
 
 # Verification record — pilot-3 interface
 
